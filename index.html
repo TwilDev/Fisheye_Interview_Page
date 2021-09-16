@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Fisheye interview page</title>
+    <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+    <!-- js -->
+    <script src="js/modal-validate.js"></script>
+    <script src="js/events.js"></script>
+
+
+    <!-- Font awesome used for icons over svgs -->
+    <script src="https://kit.fontawesome.com/c42b95b184.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body">
+
+    <section class="banner-section">
+        <div class="banner-container">
+            <div class="banner-image-container">
+                <div class="banner-text-container">
+                    <div class="banner-header">
+                        <img class="header-icon" src="img/party-icon.svg">
+                        <h1>Let the fun begin!</h1>
+                    </div>
+                    <div class="banner-small-text">
+                        <p class="heading">Thanks for your order, we'll have it with you as soon as possible</p>
+                        <p class="subhead">Your order number is #10293838 and a confirmation email has been sent to the address provided</p>
+                        
+                    </div>
+                    <div class="banner-account-form">
+                        <p class="standard-text-bold">Order even faster in future</p>
+                        <a class="create-account-btn" href="#">
+                            Create an Account
+                        </a>
+                    </div>
+                </div>
+                <picture class="banner-image">
+                    <source media="(min-width: 800px)" srcset="img/banner-bg.jpg">
+                    <source media="(min-width: 300px)" srcset="img/banner-bg-MOB.jpg">
+                    <img class="banner-image" src="img/banner-bg.jpg" alt="checkout banner">
+                </picture>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="checkout-section">
+        <div class="checkout-container">
+            <div class="checkout-heading">
+                <h2>here's what you've ordered</h2>
+            </div>
+            <div class="checkout-details-container">
+                <div class="checkout-items">
+                    <div class="checkout-item">
+                        <img class="checkout-image" src="img/prod-TN-1.jpg" alt="prodcut checkout 1">
+                        <div class="checkout-item-info">
+                            <p>17ft x 12ft Jumpking Deluxe Rectangular Trampoline with Enclosure</p>
+                            <p class="checkout-item-price"><span>£1060.00</span> £949.00</p>
+                        </div>
+                        <div class="checkout-qty">
+                            <p>QTY 1</p>
+                        </div>
+                    </div>
+                    <hr class="checkout-seperator">
+                    <div class="checkout-item">
+                        <img class="checkout-image" src="img/prod-TN-2.jpg" alt="prodcut checkout 2">
+                        <div class="checkout-item-info">
+                            <p>14ft Salta Black Round Comfort Edition Trampoline with Enclosure</p>
+                            <p class="checkout-item-price">£949.00</p>
+                        </div>
+                        <div class="checkout-qty">
+                            <p>QTY 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout-payment-container">
+                    <div class="checkout-payment">
+                        <div class="checkout-total">
+                            <div class="subtotal">
+                                <p class="checkout-bold">Subtotal</p>
+                                <p class="checkout-bold checkout-final-price">£1318.00</p>
+                            </div>
+                            <div class="delivery-total">
+                                <p class="checkout-bold">Delivery</p>
+                                <p class="checkout-bold checkout-final-price">FREE</p>
+                                <br>
+                                <p class="checkout-semi-bold">Next Working Day<span>(if ordered before 3pm)</span></p>
+                            </div>
+                        </div>
+                        <div class="final-total checkout-total">
+                            <p class="checkout-bold">Total</p>
+                            <p class="checkout-final-total">£1318.00</p>
+                        </div>
+                        <div class="checkout-payment-btn">
+                            <button type="button" class="payment-btn" id="mastercard-checkout">
+                                You paid using Mastercard
+                                <img src="img/card-icon.svg" class="mastercard-icon" alt="mastercard icon" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Would likely be apart of a php include -->
+    <section class="footer">
+        <div class="footer-container">
+            <div class="footer-mailing-container">
+                <h2 class="footer-heading">Subscribe for the latest offers</h2>
+                <input type="button" class="mail-subscribe" id="mailing-subscribe-checkout" value="Subscribe">
+            </div>
+        </div>
+    </section>
+
+    <section class="modal-section">
+        <div class="modal-container" id="checkout-subscribe-modal">
+            <div class="modal-exit">
+                <a class="modal-close" id="close-subscribe-modal">
+                    <i class="fa fa-times-circle"></i> <span>Close</span>
+                </a>
+            </div>
+            <div class="modal-header-container">
+                <h1>Newsletter Signup</h1>
+            </div>
+            <div class="modal-form-container">
+                <form class="modal-form" onsubmit="return modalValidate()">
+                    <label class="modal-label">Your Name<span class="required">*</span></label>
+                    <input type="text" class="modal-text">
+                    <label class="modal-label">Your Telephone Number<span class="required">*</span></label>
+                    <input type="tel" class="modal-text">
+                    <label class="modal-label">Your Email Address<span class="required">*</span></label>
+                    <input type="tel" class="modal-text">
+                    <span class="error" id="error-span"></span>
+                    <input type="submit" class="subscribe-submit" id="checkout-subcribe-submit" value="Signup">
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+
+
+</html>

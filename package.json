@@ -1,0 +1,16 @@
+{
+  "name": "fisheye_interview_page",
+  "version": "1.0.0",
+  "description": "interview page for fisheye media. Aapart of the technical assessment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "node-sass scss/style.scss -o css",
+    "css:watch": "npm run css && node-sass scss/style.scss -wo css"
+  },
+  "author": "Aaron Gold",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
